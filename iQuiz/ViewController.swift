@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var settings: UIToolbar!
     
     struct Categories {
         let title : String
@@ -17,9 +18,9 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     let data: [Categories] = [
-        Categories(title: "Math", imgName: "math_logo"),
-        Categories(title: "Marvel", imgName: "math_logo"),
-        Categories(title: "Science", imgName: "math_logo"),
+        Categories(title: "Mathematics", imgName: "math_logo"),
+        Categories(title: "Marvel Super Heroes", imgName: "marvel_logo"),
+        Categories(title: "Science", imgName: "science_logo"),
         
     ]
     
@@ -38,6 +39,12 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.label.text = categories.title
         cell.imgView.image = UIImage(named: categories.imgName)
         return cell
+    }
+    
+    @IBAction func settingsTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Settings", message: "Settings go here", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

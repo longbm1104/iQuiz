@@ -17,8 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yqw-NU-BXZ">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="715" id="Pi7-MM-MxF"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="117" id="vlM-IP-vgA" customClass="TableViewCell" customModule="iQuiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="117"/>
@@ -30,6 +33,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fPK-cC-fsT">
                                                     <rect key="frame" x="30" y="6" width="113" height="105"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="113" id="2PQ-ff-e6G"/>
                                                         <constraint firstAttribute="width" constant="113" id="TFf-PR-OW9"/>
                                                     </constraints>
                                                 </imageView>
@@ -57,17 +61,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="re6-cy-mjT">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <barButtonItem title="Settings" id="Nch-ee-i5D">
+                                        <connections>
+                                            <action selector="settingsTapped:" destination="BYZ-38-t0r" id="Y59-0C-YH9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yqw-NU-BXZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0IX-Se-swp"/>
+                            <constraint firstItem="yqw-NU-BXZ" firstAttribute="leading" secondItem="re6-cy-mjT" secondAttribute="leading" id="3Cd-eW-c8y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yqw-NU-BXZ" secondAttribute="bottom" id="7VO-aa-6zB"/>
+                            <constraint firstItem="yqw-NU-BXZ" firstAttribute="top" secondItem="re6-cy-mjT" secondAttribute="bottom" id="Dl2-pW-Wyv"/>
                             <constraint firstItem="yqw-NU-BXZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ezy-ew-5k7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yqw-NU-BXZ" secondAttribute="trailing" id="mFC-vB-sNQ"/>
+                            <constraint firstItem="yqw-NU-BXZ" firstAttribute="trailing" secondItem="re6-cy-mjT" secondAttribute="trailing" id="qXb-bn-MEa"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="settings" destination="re6-cy-mjT" id="jTm-GD-Amw"/>
                         <outlet property="table" destination="yqw-NU-BXZ" id="ug0-RZ-CHC"/>
                     </connections>
                 </viewController>
