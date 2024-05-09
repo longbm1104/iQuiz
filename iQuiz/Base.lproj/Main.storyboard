@@ -62,7 +62,7 @@
                                             <outlet property="imgView" destination="fPK-cC-fsT" id="2iP-b6-v6y"/>
                                             <outlet property="label" destination="bTt-Cb-CzQ" id="B0j-a4-Zs8"/>
                                             <outlet property="label_desc" destination="W9g-Lu-2lM" id="edy-2D-hL5"/>
-                                            <segue destination="sFO-ys-55x" kind="show" id="D1H-8n-zex"/>
+                                            <segue destination="sFO-ys-55x" kind="show" identifier="" id="D1H-8n-zex"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -106,7 +106,7 @@
         <!--Question View Controller-->
         <scene sceneID="sT7-xv-1Da">
             <objects>
-                <viewController id="sFO-ys-55x" customClass="QuestionViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionViewController" id="sFO-ys-55x" customClass="QuestionViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NcG-G8-XWN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

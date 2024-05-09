@@ -29,6 +29,7 @@ import UIKit
 struct Categories: Decodable {
     let title: String
     let desc: String
+//    let imgName: String
     let questions: [Question]
 }
 

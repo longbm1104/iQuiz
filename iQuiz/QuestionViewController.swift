@@ -13,12 +13,12 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var ansPicker: UIPickerView!
     @IBOutlet weak var submitBtn: UIButton!
     
+    var questionsData: [Categories] = []    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.ansPicker.delegate = self
         self.ansPicker.dataSource = self
-        
-//        showQuestion()
     }
     
     //Number of data column
@@ -26,6 +26,7 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         return 1
     }
     
+    // Number of rows in picker view
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 4
     }
